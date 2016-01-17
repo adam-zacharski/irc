@@ -34,11 +34,8 @@ if(showhide == "show"){
     document.getElementById('popupbox').style.visibility="hidden"; 
 }
 }
-
-
       function ChatController($scope) {
-        var socket = io.connect('https://' + document.domain + ':' + location.port + '/chat');
-
+        var socket = io.connect('//' + document.domain + ':' + location.port + '/chat');
         //var socket = io.connect();
 
         $scope.messages = [];
@@ -168,7 +165,7 @@ if(showhide == "show"){
         </div>
       </div>
     </div>
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.4/socket.io.min.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/angular.min.js"></script>
